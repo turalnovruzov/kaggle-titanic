@@ -1,4 +1,9 @@
-def param_curve(model, param, start=1, end=100, step=1, verbose=True):
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import cross_val_score
+
+
+def param_curve(model, param, X, y, start=1, end=100, step=1, verbose=True):
     x_ax = []
     scores = []
     val_scores = []
